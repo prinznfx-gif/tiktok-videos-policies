@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tiktok videos</title>
+<style>
+  :root{
+    --bg:#eef0f4;
+    --surface:#ffffff;
+    --line:#dbdee6;
+    --text:#1b1d23;
+    --muted:#5b5f6b;
+    --accent:#3550d9;
+    --accent-soft:#e8ebfb;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14161c; --surface:#1c1f27; --line:#2c303c;
+      --text:#e8e9ed; --muted:#9296a3; --accent:#8ea1ff; --accent-soft:#242a45;
+    }
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family: ui-sans-serif, "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:640px;margin:0 auto;padding:64px 24px 96px;}
+  .eyebrow{
+    font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--accent); font-weight:600;
+  }
+  h1{
+    font-family: Georgia, "Iowan Old Style", "Source Serif Pro", "Times New Roman", serif;
+    font-size:2.4rem; line-height:1.15; margin:10px 0 18px; text-wrap:balance; letter-spacing:-0.01em;
+  }
+  p.lead{font-size:1.08rem; max-width:56ch; color:var(--text);}
+  .card{
+    background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:22px 24px; margin:32px 0; display:flex; flex-direction:column; gap:10px;
+  }
+  .card h2{font-size:0.95rem; margin:0; color:var(--muted); font-weight:600; letter-spacing:0.01em;}
+  .card ul{margin:0; padding-left:1.2em;}
+  .card li{margin-bottom:6px; max-width:60ch;}
+  footer{
+    margin-top:44px; padding-top:22px; border-top:1px solid var(--line);
+    display:flex; gap:20px; font-size:0.92rem;
+  }
+  footer a{color:var(--accent); text-decoration:none;}
+  footer a:hover, footer a:focus-visible{text-decoration:underline;}
+  a:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="eyebrow">Personal automation project</span>
+  <h1>Tiktok videos</h1>
+  <p class="lead">A personal, single-user automation that publishes my own pre-recorded DJ Scirocco music mix videos to my own TikTok account on a schedule.</p>
+
+  <div class="card">
+    <h2>How it works</h2>
+    <ul>
+      <li>Video mixes are produced ahead of time and stored in a local library.</li>
+      <li>An automated workflow (built with n8n) selects an eligible video by name and length.</li>
+      <li>The workflow authenticates with my own TikTok account via OAuth2 and publishes the video through TikTok's official Content Posting API.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Who this is for</h2>
+    <ul>
+      <li>This is not a public service. It has exactly one operator and one connected TikTok account.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <a href="./terms.html">Terms of Service</a>
+    <a href="./privacy.html">Privacy Policy</a>
+  </footer>
+</div>
+</body>
+</html>
